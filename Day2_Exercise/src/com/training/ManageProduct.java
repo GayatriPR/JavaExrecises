@@ -3,29 +3,45 @@ package com.training;
 public class ManageProduct {
 	
 	//Example for if-else condition
-	public double calculateDiscount(Product product) {
+	public Product[] calculateDiscount(Product[] productList) {
 		
 		double discount = 0.0;
 		
-		if(product.getRatePerUnit()>500 && product.getRatePerUnit()<=1000)
+		for(Product prods:productList)
 		{
-			discount=0.10;
-		}
-		else if(product.getRatePerUnit()>1000)
-		{
-			discount=0.15;
+			if(prods.getRatePerUnit()>500 && prods.getRatePerUnit()<=1000)
+			{
+				discount=0.10;
+				prods.setDiscount(discount*prods.getRatePerUnit());
+
+			}
+			else if(prods.getRatePerUnit()>1000)
+			{
+				discount=0.15;
+				prods.setDiscount(discount*prods.getRatePerUnit());
+			}
+	   
 		}
 		
-		return discount;
+		 return productList;
 	}
 	
 	//For-loop
-	public void showProducts() {
-		for(int i=0;i<10;i++)
+	public void showProductsLegacy(Product[] productList) {
+		for(int i=0;i<productList.length;i++)
 		{
-			System.out.println("Product");
+			System.out.println("Product:" + i +" = "+productList[i].getProductName() );
 		}
 	}
+	
+	public void showProductForEach(Product[] productList)
+	{
+		for(Product eachProduct: productList) {
+			System.out.println(eachProduct.getProductName()+":"+eachProduct.getDiscount()*eachProduct.getQuantity());
+		}
+	}
+	
+	
 	
 	//switch statement
 	public void calculateTax(Product product) {
