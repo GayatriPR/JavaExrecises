@@ -5,7 +5,7 @@ public class Application {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Product tv = new Product(1010,"LED TV",25000.00);
+		Product tv = new Product(1010,"LED TV",25000.00,2);
 		
 		ManageProduct mgp = new ManageProduct();
 		
@@ -14,9 +14,9 @@ public class Application {
 		System.out.println("discount is : " + discount);
 		
 		//for-loop
-		mgp.showProducts();
+		//mgp.showProducts();
 		
-		mgp.calculateTax();
+		mgp.calculateTax(tv);
 
 	}
 

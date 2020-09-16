@@ -13,7 +13,7 @@ public class Product {
 	}
 
 	
-	public Product(int productId, String productName, double ratePerUnit) {
+	public Product(int productId, String productName, double ratePerUnit, int productType) {
 		super();
 		this.productId = productId;
 		this.productName = productName;

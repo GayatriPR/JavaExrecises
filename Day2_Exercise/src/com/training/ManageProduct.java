@@ -28,8 +28,8 @@ public class ManageProduct {
 	}
 	
 	//switch statement
-	public void calculateTax() {
-		int productType = 2;
+	public void calculateTax(Product product) {
+		int productType = product.getProductType();
 	switch(productType)
 		{
 		case 1:
