@@ -20,7 +20,9 @@ public class Application {
 		fridge.setProductType(3);
 		fridge.setQuantity(30);
 		
-		//mgp.calculateTax(tv);
+		int taxAmount = mgp.calculateTax(tv);
+		System.out.println(taxAmount);
+		
 		
 		//creating a array of type product with size 2
 		

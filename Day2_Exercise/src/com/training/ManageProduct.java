@@ -30,7 +30,9 @@ public class ManageProduct {
 	public void showProductsLegacy(Product[] productList) {
 		for(int i=0;i<productList.length;i++)
 		{
-			System.out.println("Product:" + i +" = "+productList[i].getProductName() );
+			
+			//System.out.println("Product:" + i +" = "+productList[i].getProductName() );
+			System.out.println(productList[i]);   //parent of our class i.e object called method toString()
 		}
 	}
 	
@@ -44,22 +46,19 @@ public class ManageProduct {
 	
 	
 	//switch statement
-	public void calculateTax(Product product) {
-		int productType = product.getProductType();
+	public int calculateTax(Product product) {	
+	int productType = product.getProductType();
 	switch(productType)
 		{
 		case 1:
-			System.out.println("5%");
-			break;
+			return 5;
 					
 		case 2:
-			System.out.println("10%");
-			break;
+			return 10;
 		case 3:
-			System.out.println("15%");
-			break;
+			return 15;
 		default:
-			System.out.println("20%");
+			return 20;
 					
 		}
 	}

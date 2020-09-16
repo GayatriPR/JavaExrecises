@@ -1,7 +1,10 @@
 package com.training;
 
-public class Product {
-
+public class Product extends Object {
+	
+	//Object is Superclass
+	//Product is Sub Class
+	
 	private int	productId;
 	private String productName;
 	private double ratePerUnit;
@@ -78,6 +81,19 @@ public class Product {
 	public void setDiscount(double discount) {
 		this.discount = discount;
 	}
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		
+		//return this.productName + ":" + this.ratePerUnit;
+      
+		return super.toString() + this.productName + ":" + this.ratePerUnit;
+
+	
+	}
+	
 	
 	
 }
