@@ -5,24 +5,23 @@ import com.training.ifaces.RentalAgency;
 public class Rent {
 
 	
-	public RentalAgency getRent(int key)
+	public RentalAgency getProduct(int key)
 	{
 		switch(key)
 		{
 		case 1:
-			return new Computer();
+			return new Computer("Dell Computer", 1000.00, 2, 20);
 		case 2:
-			return new Furnitures();
+			return new Furnitures("Sofa", 5000.00, 3, 10);
 		default:
 			return null;
 		}
 	}
 	
-	public double printRent(RentalAgency polyrent)
-	{
-		double amount = 0.0;
-		amount = amount + (polyrent.getQuantity()* polyrent.getRatePerDay()* polyrent.getDays());
-	
-		return amount;
+	public void printRent(RentalAgency rent) {
+		
+		System.out.println(rent.getRent());
 	}
+
+	
 }
