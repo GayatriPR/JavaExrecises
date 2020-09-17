@@ -4,6 +4,7 @@ import com.training.ifaces.Automobile;
 
 public class Bike implements Automobile {
 
+	//overriding
 	@Override
 	public String getColor() {
 		// TODO Auto-generated method stub

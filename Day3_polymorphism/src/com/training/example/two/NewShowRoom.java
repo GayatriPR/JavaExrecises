@@ -2,6 +2,7 @@ package com.training.example.two;
 
 import com.training.ifaces.Automobile;
 
+//inheritance
 public class NewShowRoom extends ShowRoom {
 
 	@Override
